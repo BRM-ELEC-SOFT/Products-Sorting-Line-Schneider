@@ -1,2 +1,13 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+'*.sta' filter=lfs diff=lfs merge=lfs -text
+'*.stu' filter=lfs diff=lfs merge=lfs -text
+/schneider.git/HEAD filter=lfs diff=lfs merge=lfs -text
+/schneider.git/config filter=lfs diff=lfs merge=lfs -text
+/schneider.git/description filter=lfs diff=lfs merge=lfs -text
+*.sample filter=lfs diff=lfs merge=lfs -text
+/schneider.git/info/exclude filter=lfs diff=lfs merge=lfs -text
+*.idx filter=lfs diff=lfs merge=lfs -text
+*.pack filter=lfs diff=lfs merge=lfs -text
+*.rev filter=lfs diff=lfs merge=lfs -text
+/schneider.git/packed-refs filter=lfs diff=lfs merge=lfs -text

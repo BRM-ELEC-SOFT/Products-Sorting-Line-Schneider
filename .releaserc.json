@@ -1,0 +1,36 @@
+{
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "preset": "angular",
+      "releaseRules": [
+        {"type" : "major", "release": "major"},
+        {"type" : "minor", "release": "minor"},
+        {"type" : "patch", "release": "patch"},
+        {"type" : "fix",   "release": "patch"},
+        {"type" : "bug",   "release": "patch"},
+        {"type" : "Major", "release": "major"},
+        {"type" : "Minor", "release": "minor"},
+        {"type" : "Patch", "release": "patch"},
+        {"type" : "Bug",   "release": "patch"},
+        {"type" : "Fix",   "release": "patch"}    
+      ]
+    }],
+    ["@semantic-release/release-notes-generator",{
+      "preset": "conventionalcommits",
+      "presetConfig": {"types": [
+          {"type": "major", "section": ":rotating_light: Breaking change", "hidden": false},
+          {"type": "minor", "section": ":rocket: New features",            "hidden": false},
+          {"type": "patch", "section": ":hammer_pick: Updates",            "hidden": false},
+          {"type": "fix",   "section": ":bug: Bug fixes",                  "hidden": false},
+          {"type": "bug",   "section": ":bug: Bug fixes",                  "hidden": false},	
+          {"type": "Major", "section": ":rotating_light: Breaking change", "hidden": false},
+          {"type": "Minor", "section": ":rocket: New features",            "hidden": false},
+          {"type": "Patch", "section": ":hammer_pick: Updates",            "hidden": false},
+          {"type": "Fix",   "section": ":bug: Bug fixes",                  "hidden": false},
+          {"type": "Bug",   "section": ":bug: Bug fixes",                  "hidden": false}
+          ]}
+      }],
+    "@semantic-release/gitlab"
+  ],
+  "branches":["master", "+([0-9])?(-+([0-9]))-release"]
+}
